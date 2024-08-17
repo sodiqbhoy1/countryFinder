@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  background-color: #3d64e6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background-color: #fff;
+  max-width: 600px;
+  width: 90%;
+  padding: 2em;
+  border-radius: 0.65em;
+  box-shadow: 0 1.25em 1.8em rgba(8, 21, 65, 0.25);
+  text-align: center;
+}
+
+h2 {
+  color: #3d64e6;
+  margin-bottom: 1em;
+  font-size: 1.8em;
+  font-weight: 700;
+  /* padding: 10px 0; */
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+}
+
+#error {
+  color: red;
+  margin-bottom: 1em;
+}
+
+#result {
+  margin-top: 30px;
+  background-color: rgba(127, 17, 224, 0.13);
+  border-radius: 10px;
+  padding: 1.5em;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  margin: 1em auto;
+}
+
+.loader .dot {
+  width: 15px;
+  height: 15px;
+  background-color: #3d64e6;
+  border-radius: 50%;
+  margin: 0 5px;
+  animation: bounce 0.6s infinite alternate;
+}
+
+.loader .dot:nth-child(2) {
+  background-color: #ff5722;
+  animation-delay: 0.2s;
+}
+
+.loader .dot:nth-child(3) {
+  background-color: #4caf50;
+  animation-delay: 0.4s;
+}
+
+@keyframes bounce {
+  to {
+    transform: translateY(-15px);
+    opacity: 0.8;
+  }
+}
+
+.flag {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1em;
+}
+
+.flag img {
+  width: 48%;
+  border-radius: 0.3em;
+  box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.1);
+}
+
+.country {
+  font-size: 1.5em;
+  font-weight: 600;
+  margin: 1em 0;
+}
+
+.card p {
+  color: #222a43;
+  font-weight: 600;
+  margin: 10px 0;
+  font-size: 1.1em;
+}
+
+.card p span {
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+button {
+  font-size: 1em;
+  padding: 0.8em;
+  border: none;
+  border-radius: 1.5em;
+  background-color: #3d64e6;
+  color: #fff;
+  cursor: pointer;
+  width: 100%;
+}
+
+input {
+  font-size: 1em;
+  padding: 0.8em;
+  border: none;
+  border-bottom: 2px solid #3d64e6;
+  outline: none;
+  color: #222a43;
+}
+
+@media (min-width: 600px) {
+  .input-container {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  input {
+    width: 70%;
+  }
+
+  button {
+    width: 30%;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 500px;
+  }
+
+  .flag img {
+    width: 45%;
+  }
+}
